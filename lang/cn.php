@@ -6,7 +6,8 @@
 	$MSG_STATUS="状态";
 	$MSG_RANKLIST="排名";
 	$MSG_CONTEST="竞赛&作业";
-  $MSG_RECENT_CONTEST="名校联赛";
+  	$MSG_RECENT_CONTEST="最近比赛";
+  	$MSG_ACM_STEPS="ACM之路";
 	$MSG_LOGOUT="注销";
 	$MSG_LOGIN="登录";
 	$MSG_REGISTER="注册";

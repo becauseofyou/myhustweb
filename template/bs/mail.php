@@ -34,7 +34,7 @@
 	</form>
    </table>
    <table border=1>
-   <tr><td>Mail ID<td>From:Title<td>Date</tr>
+   <tr><td>Mail ID<td>From:Title<td>Date<td>操作</tr>
    <tbody>
 			<?php 
 			$cnt=0;
@@ -49,6 +49,8 @@
 					echo "</td>";
 				}
 				
+                //echo '<td><a href="./graduate/delete.php?id='.$row[0].'">删除</a></td>';
+
 				echo "</tr>";
 				
 				$cnt=1-$cnt;
