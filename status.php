@@ -10,7 +10,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 	require_once('./include/setlang.php');
 	$view_title= "$MSG_STATUS";
 	
-
+    
         
 require_once("./include/my_func.inc.php");
 if(isset($OJ_LANG)){
