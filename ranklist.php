@@ -2,7 +2,7 @@
         $OJ_CACHE_SHARE=false;
         $cache_time=30;
         require_once('./include/cache_start.php');
-    require_once('./include/db_info.inc.php');
+        require_once('./include/db_info.inc.php');
         require_once('./include/setlang.php');
         $view_title= $MSG_RANKLIST;
 
@@ -56,13 +56,15 @@
 
 
        //         $result = mysql_query ( $sql ); //mysql_error();
+       // echo "<head>p".$OJ_MEMCACHE."p</head>";
         if($OJ_MEMCACHE){
+                //echo "<head>cahed</head>";
                 require("./include/memcache.php");
                 $result = mysql_query_cache($sql) ;//or die("Error! ".mysql_error());
                 if($result) $rows_cnt=count($result);
                 else $rows_cnt=0;
         }else{
-
+                //echo "<head>not cahed</head>";
                 $result = mysql_query($sql) or die("Error! ".mysql_error());
                 if($result) $rows_cnt=mysql_num_rows($result);
                 else $rows_cnt=0;

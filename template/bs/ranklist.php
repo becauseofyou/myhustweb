@@ -8,7 +8,7 @@
 <div id="wrapper">
 	<?php require_once("oj-header.php");?>
 <div id=main>
-	<table align=center width=90%>
+	<table align=center width=100%>
 		<thead>
 		<tr><td colspan=3 align=left>
 			<form action=userinfo.php>
@@ -21,7 +21,7 @@
 			<a href=ranklist.php?scope=y>Year</a>
 			</td></tr>
 		<tr class='toprow'>
-				<td width=5% align=center><b><?php echo $MSG_Number?></b>
+				<td width=5% align=left><b><?php echo $MSG_Number?></b>
 				<td width=10% align=center><b><?php echo $MSG_USER?></b>
 				<td width=55% align=center><b><?php echo $MSG_NICK?></b>
 				<td width=10% align=center><b><?php echo $MSG_AC?></b>

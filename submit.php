@@ -10,30 +10,30 @@ require_once("include/const.inc.php");
   $now=strftime("%Y-%m-%d %H:%M",time());
 $user_id=$_SESSION['user_id'];
 
-if (isset($_POST['cid'])){
-	$pid=intval($_POST['pid']);
-	$cid=intval($_POST['cid']);
-	$sql="SELECT `problem_id` from `contest_problem` 
-				where `num`='$pid' and contest_id=$cid";
-}else{
-	$id=intval($_POST['id']);
-	$sql="SELECT `problem_id` from `problem` where `problem_id`='$id' and problem_id not in (select distinct problem_id from contest_problem where `contest_id` IN (
-			SELECT `contest_id` FROM `contest` WHERE 
-			(`end_time`>'$now' or private=1)and `defunct`='N'
-			))";
-	if(!isset($_SESSION['administrator']))
-		$sql.=" and defunct='N'";
-}
-//echo $sql;	
+// if (isset($_POST['cid'])){
+// 	$pid=intval($_POST['pid']);
+// 	$cid=intval($_POST['cid']);
+// 	$sql="SELECT `problem_id` from `contest_problem` 
+// 				where `num`='$pid' and contest_id=$cid";
+// }else{
+// 	$id=intval($_POST['id']);
+// 	$sql="SELECT `problem_id` from `problem` where `problem_id`='$id' and problem_id not in (select distinct problem_id from contest_problem where `contest_id` IN (
+// 			SELECT `contest_id` FROM `contest` WHERE 
+// 			(`end_time`>'$now' or private=1)and `defunct`='N'
+// 			))";
+// 	if(!isset($_SESSION['administrator']))
+// 		$sql.=" and defunct='N'";
+// }
+// echo $sql;	
 
-$res=mysql_query($sql);
-if ($res&&mysql_num_rows($res)<1&&!isset($_SESSION['administrator'])&&!((isset($cid)&&$cid==0)||(isset($id)&&$id==0))){
-		mysql_free_result($res);
-		$view_errors=  "Where do find this link? No such problem.<br>";
-		require("template/".$OJ_TEMPLATE."/error.php");
-		exit(0);
-}
-mysql_free_result($res);
+// $res=mysql_query($sql);
+// if ($res&&mysql_num_rows($res)<1&&!isset($_SESSION['administrator'])&&!((isset($cid)&&$cid==0)||(isset($id)&&$id==0))){
+// 		mysql_free_result($res);
+// 		$view_errors=  "Where do find this link? No such problem.<br>";
+// 		require("template/".$OJ_TEMPLATE."/error.php");
+// 		exit(0);
+// }
+// mysql_free_result($res);
 
 
 

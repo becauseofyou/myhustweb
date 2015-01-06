@@ -72,15 +72,16 @@ if(isset($_GET['search'])&&trim($_GET['search'])!=""){
 }else{
      $filter_sql="  `problem_id`>='".strval($pstart)."' AND `problem_id`<'".strval($pend)."' ";
 }
-
+$sql="SELECT `problem_id`,`title`,`source`,`submit`,`accepted` FROM `problem` WHERE $filter_sql ";
+/*
 if (isset($_SESSION['administrator'])){
-	
+	//echo "ddd";
 	$sql="SELECT `problem_id`,`title`,`source`,`submit`,`accepted` FROM `problem` WHERE $filter_sql ";
 	
 }
 else{
 	$now=strftime("%Y-%m-%d %H:%M",time());
-	$sql="SELECT `problem_id`,`title`,`source`,`submit`,`accepted` FROM `problem` ".
+	$sql="SELECT `problem_id`,`title`,`source`,`submit`,`accepted` FROM `problem`  ".
 	"WHERE `defunct`='N' and $filter_sql AND `problem_id` NOT IN(
 		SELECT `problem_id` FROM `contest_problem` WHERE `contest_id` IN (
 			SELECT `contest_id` FROM `contest` WHERE 
@@ -91,8 +92,8 @@ else{
 
 }
 $sql.=" ORDER BY `problem_id`";
-
-
+*/
+$now=strftime("%Y-%m-%d %H:%M",time());
 $result=mysql_query($sql) or die(mysql_error());
 
 $view_total_page=$cnt+1;

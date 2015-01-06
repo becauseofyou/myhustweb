@@ -87,17 +87,13 @@ if(isset($_COOKIE['lastlang'])) $lastlang=$_COOKIE['lastlang'];
 <br>
 
 <textarea style="width:80%" cols=180 rows=20 id="source" name="source"><?php echo $view_src?></textarea><br>
-<?php echo $MSG_Input?>:<textarea style="width:30%" cols=40 rows=5 id="input_text" name="input_text" ><?php echo $view_sample_input?></textarea>
-<?php echo $MSG_Output?>:
-  <textarea style="width:30%" cols=40 rows=5 id="out" name="out" >SHOULD BE:
-<?php echo $view_sample_output?>
+
 </textarea>
 
 <br>
 
 <input id=Submit class="btn btn-info" type=button value="<?php echo $MSG_SUBMIT?>"  onclick=do_submit();>
-<input id=TestRun class="btn btn-info"  type=button value="<?php echo $MSG_TR?>" onclick=do_test_run();><span  class="btn"  id=result>状态</span>
-<input type=reset  class="btn btn-danger" value="重置">
+
 </form>
 
 <iframe name=testRun width=0 height=0 src="about:blank"></iframe>

@@ -29,7 +29,7 @@
 		<a class='btn <?php if ($url==(isset($OJ_FAQ_LINK)?$OJ_FAQ_LINK:"faqs.php")) echo " $ACTIVE";?>' href="<?php echo isset($OJ_FAQ_LINK)?$OJ_FAQ_LINK:"faqs.php"?>">
                 <i class="icon-info-sign"></i><?php echo "$MSG_FAQ"?></a>
 		
-		<a class='btn <?php if ($url=="acmsteps.php") echo " $ACTIVE";?>' href="acmsteps.php">
+		<a class='btn <?php if ($url=="acmsteps.php") echo " $ACTIVE";?>' href="./games/acmstep/problem.php">
 		<i class="icon-share"></i><?php echo "$MSG_ACM_STEPS"?></a>
 
 		<?php if(isset($OJ_DICT)&&$OJ_DICT&&$OJ_LANG=="cn"){?>

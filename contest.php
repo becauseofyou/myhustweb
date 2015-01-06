@@ -66,19 +66,21 @@
 	{
 		$result = $length . '秒';
 	}
+	//print $result;
 	return $result;
 }
 
-	if (isset($_GET['cid'])){
+		if (isset($_GET['cid'])){
 			$cid=intval($_GET['cid']);
 			$view_cid=$cid;
-		//	print $cid;
-			
+			//print $cid;
+			//echo "<br/>";
 			
 			// check contest valid
 			$sql="SELECT * FROM `contest` WHERE `contest_id`='$cid' ";
 			$result=mysql_query($sql);
 			$rows_cnt=mysql_num_rows($result);
+			//print $rows_cnt;
 			$contest_ok=true;
 			
 			
@@ -144,7 +146,7 @@
 		
 			mysql_free_result($result);
 
-}else{
+	}else{
 
   $sql="SELECT * FROM `contest` WHERE `defunct`='N' ORDER BY `contest_id` DESC limit 100";
 			$result=mysql_query($sql);

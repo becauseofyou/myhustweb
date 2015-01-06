@@ -6,6 +6,7 @@
 </head>
 <body>
 <div id="wrapper">
+
 	<?php require_once("contest-header.php");?>
 <div id=main>
 <script src="include/sortTable.js"></script>
@@ -41,7 +42,7 @@
 	
 	
 	</div>
-	<table id='problemset' width='90%'>
+	<table id='problemset' width='80%'>
 		<thead>
 			
 			<tr align=center class='toprow'>

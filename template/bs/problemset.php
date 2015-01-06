@@ -22,7 +22,7 @@ $(document).ready(function()
         <?php
     for ($i=1;$i<=$view_total_page;$i++){
 		if ($i>1) echo '&nbsp;';
-		if ($i==$page) echo "<span class=red>$i</span>";
+		if ($i==$page) echo "<span class=blue>$i</span>";
 		else echo "<a href='problemset.php?page=".$i."'>".$i."</a>";
 	}
         ?>
@@ -47,12 +47,12 @@ $(document).ready(function()
                 <thead>
 
                           <tr class='toprow'>
-                            <th width='5'></th>
-                          	<th width='120'  ><A><?php echo $MSG_PROBLEM_ID?></A></th>
-                            <th><?php echo $MSG_TITLE?></th>
-                            <th width='10%'><?php echo $MSG_SOURCE?></th>
-                            <th style="cursor:hand"  width=60 ><?php echo $MSG_AC?></th>
-                            <th style="cursor:hand" width=60 ><?php echo $MSG_SUBMIT?></th>
+                            <th width='5%'></th>
+                          	<th width='10%'><?php echo $MSG_PROBLEM_ID?></th>
+                            <th width='50%'><?php echo $MSG_TITLE?></th>
+                            <th width='30%'><?php echo $MSG_SOURCE?></th>
+                            <th width='10%' ><?php echo $MSG_AC?></th>
+                            <th width='10%'><?php echo $MSG_SUBMIT?></th>
                           </tr>
                 </thead>
 
